@@ -1,0 +1,31 @@
+/* Floating background orbs */
+.orb {
+  position: fixed;
+  border-radius: 50%;
+  filter: blur(90px);
+  opacity: 0.25;
+  pointer-events: none;
+  z-index: 0;
+}
+.orb1 {
+  width: 500px; height: 500px;
+  background: var(--blush);
+  top: -100px; right: -100px;
+  animation: drift 8s ease-in-out infinite alternate;
+}
+.orb2 {
+  width: 350px; height: 350px;
+  background: #E8C5B8;
+  bottom: 200px; left: -80px;
+  animation: drift 10s ease-in-out infinite alternate-reverse;
+}
+
+@keyframes drift {
+  from { transform: translateY(0px) scale(1); }
+  to   { transform: translateY(40px) scale(1.05); }
+}
+
+section {
+  position: relative;
+  z-index: 1;
+}
